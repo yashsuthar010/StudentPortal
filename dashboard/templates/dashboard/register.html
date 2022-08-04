@@ -1,0 +1,39 @@
+{% extends 'dashboard/base.html' %} {% load static %} {% load crispy_forms_tags
+%} {% block content %}
+
+<div class="container" style="height: 650px; overflow: hidden">
+  <form method="POST">
+    {% csrf_token %}
+    <fieldset class="form-group text-light d">
+      <legend
+        class="border-bottom mb-4"
+        style="color: green; padding-top: 45px; font-size: 2.5em; display: flex"
+      >
+        <b>Join Us</b>
+      </legend>
+      {{form}}
+    </fieldset>
+    <div class="form-group">
+      <button
+        href=""
+        class="btn btn-outline-info"
+        type="submit"
+        style="color: #4e9f3d; border-color: #4e9f3d"
+      >
+        Sign Up
+      </button>
+    </div>
+  </form>
+  <div class="border-top pt-3">
+    <small class="text-muted"
+      >Already have an account?
+      <a
+        class="ml-2"
+        href="{% url 'login' %}"
+        style="color: white; font-size: 1rem"
+        >Sign In</a
+      >
+    </small>
+  </div>
+</div>
+{% endblock content %}

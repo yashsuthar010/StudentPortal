@@ -1,0 +1,167 @@
+{% extends 'dashboard/base.html' %} {% load static %} {% block content %}
+
+<section class="container text-center" style="color: green; padding-top: 40px">
+  <div>
+    <h1 style="font-size: 3rem">
+      <b
+        >Share <br />
+        What You Know!</b
+      >
+    </h1>
+    <!-- <hr
+      style="height: 1px; border-width: 0; color: gray; background-color: gray"
+    /> -->
+  </div>
+</section>
+
+<section
+  class="container text-center"
+  style="
+    background-image: linear-gradient(to bottom right, #20bf55, #01baef);
+    padding-left: 200px;
+    border-radius: 50px 50px 0 0;
+    min-height: 800px;
+  "
+>
+  <hr />
+  <br />
+  <div class="row">
+    <div class="p-3 mb-5 col-md-3">
+      <a href="{% url 'notes' %}">
+        <div
+          class="card shadow-lg"
+          style="background-color: transparent; border: none; padding: 5px"
+        >
+          <img
+            class="card-img-top"
+            src="{% static 'images/notes.png' %}"
+            alt="Notes image"
+          />
+          <div class="card-body">
+            <h5 class="card-title text-white">Notes</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="shadow-none p-3 mb-5 col-md-3">
+      <a href="{% url 'homework' %}">
+        <div
+          class="card shadow"
+          style="background-color: transparent; border: none; padding: 5px"
+        >
+          <img
+            class="card-img-top"
+            src="{% static 'images/homework.png' %}"
+            alt="Notes image"
+          />
+          <div class="card-body">
+            <h5 class="card-title text-white">Homework</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- <div class="col-md-3">
+      <a href="#">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="{% static 'images/youtube.jpg' %}"
+            alt="Notes image"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Youtube</h5>
+            Search Youtube and select your desired video to play it on youtube
+          </div>
+        </div>
+      </a>
+    </div> -->
+    <div class="shadow-none p-3 mb-5 col-md-3">
+      <a href="{% url 'todo' %}">
+        <div
+          class="card shadow"
+          style="background-color: transparent; border: none; padding: 5px"
+        >
+          <img
+            class="card-img-top"
+            src="{% static 'images/todo.png' %}"
+            alt="Notes image"
+          />
+          <div class="card-body">
+            <h5 class="card-title text-white">To Do</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <br /><br />
+  <div class="row">
+    <!-- <div class="col-md-3">
+      <a href="#">
+        <div class="card mt-20">
+          <img
+            class="card-img-top"
+            src="{% static 'images/books.jpg' %}"
+            alt="Notes image"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Books</h5>
+            Browse books from a list of neatly organised book menu
+          </div>
+        </div>
+      </a>
+    </div> -->
+
+    <div class="shadow-none p-3 mb-5 col-md-3">
+      <a href="{% url 'dictionary' %}">
+        <div
+          class="card shadow"
+          style="background-color: transparent; border: none; padding: 5px"
+        >
+          <img
+            class="card-img-top"
+            src="{% static 'images/dict.png' %}"
+            alt="Notes image"
+          />
+          <div class="card-body">
+            <h5 class="card-title text-white">Dictionary</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="shadow-none p-3 mb-5 col-md-3">
+      <a href="{% url 'wiki' %}">
+        <div
+          class="card shadow"
+          style="background-color: transparent; border: none; padding: 5px"
+        >
+          <img
+            class="card-img-top"
+            src="{% static 'images/wiki.png' %}"
+            alt="Notes image"
+          />
+          <div class="card-body">
+            <h5 class="card-title text-white">WikiPedia</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- <div class="col-md-3">
+      <a href="#">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/conversion.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Conversion
+            </h5>
+            Check out the conversion table, that helps you to convert measurements to more familiar ones of your choice.
+          </div>
+        </div>
+      </a>
+    </div> -->
+  </div>
+</section>
+<br />
+
+{% endblock content %}
